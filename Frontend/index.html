@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="FluxEngine — Build high-performance automation workflows with a node-based system, a Rust backend, and sandboxed Python execution.">
+    <title>FluxEngine — High-Performance Developer Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/flux-enhancements.css">
+</head>
+
+<body>
+    <!-- Loading Overlay -->
+    <div id="fx-loader" aria-label="Loading FluxEngine">
+        <div class="fx-loader-ring"></div>
+        <span class="fx-loader-text">FLUXENGINE</span>
+    </div>
+
+    <!-- Three.js Canvas Layer -->
+    <div id="fx-canvas" aria-hidden="true"></div>
+
+    <!-- Cinematic Overlays -->
+    <div id="fx-cinematic-overlay" aria-hidden="true"></div>
+    <div id="fx-fog-overlay" aria-hidden="true"></div>
+    <div id="fx-scroll-progress" aria-hidden="true"></div>
+    <div class="fx-section-flash" aria-hidden="true"></div>
+
+    <!-- Section Indicators -->
+    <div class="fx-section-indicators" aria-hidden="true">
+        <span class="fx-section-dot" data-section="hero"></span>
+        <span class="fx-section-dot" data-section="architecture"></span>
+        <span class="fx-section-dot" data-section="technology"></span>
+        <span class="fx-section-dot" data-section="showcase"></span>
+    </div>
+
+    <!-- Content Layer -->
+    <div id="fx-content">
+
+        <!-- Navigation -->
+        <nav class="fx-nav" id="fx-nav" role="navigation" aria-label="Main">
+            <a href="#" class="fx-nav-logo" aria-label="FluxEngine home">
+                <span class="fx-logo-dot"></span>FLUXENGINE
+            </a>
+            <ul class="fx-nav-links">
+                <li><a href="#fx-hero" class="fx-active">Home</a></li>
+                <li><a href="#fx-architecture">Architecture</a></li>
+                <li><a href="#fx-technology">Technology</a></li>
+                <li><a href="#fx-showcase">Showcase</a></li>
+            </ul>
+            <button class="fx-nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+
+        <!-- ─── HERO ─── -->
+        <section id="fx-hero" class="fx-section" data-scene="hero">
+            <div class="fx-section-inner" data-fx-parallax="0.15">
+                <div class="fx-hero-badge">
+                    <span class="fx-badge-pulse"></span> Rust-Powered · Now in Beta
+                </div>
+                <h1 class="fx-hero-title">
+                    Build at the<br><span class="fx-accent-text">Speed of Rust</span>
+                </h1>
+                <p class="fx-hero-sub">
+                    FluxEngine is a high-performance developer platform for building automation pipelines
+                    with modular nodes, a Rust backend, and sandboxed Python execution.
+                </p>
+                <div class="fx-hero-cta">
+                    <a href="#fx-architecture" class="fx-btn fx-btn-primary">
+                        Explore Architecture <span aria-hidden="true">→</span>
+                    </a>
+                    <a href="#fx-showcase" class="fx-btn fx-btn-ghost">View Showcase</a>
+                </div>
+            </div>
+            <div class="fx-scroll-hint" aria-hidden="true">
+                <span>Scroll</span><span class="fx-scroll-line"></span>
+            </div>
+        </section>
+
+        <!-- ─── ARCHITECTURE ─── -->
+        <section id="fx-architecture" class="fx-section" data-scene="architecture">
+            <div class="fx-section-inner" data-fx-parallax="0.12">
+                <div class="fx-section-head">
+                    <span class="fx-section-label">01 — Architecture</span>
+                    <h2 class="fx-section-title">Modular by Design.<br>Infinite in Scale.</h2>
+                    <p class="fx-section-desc">
+                        Compose workflows from reusable nodes. Each node runs in a sandboxed Python environment,
+                        orchestrated by a high-concurrency Rust engine. Connect, configure, and execute — safely.
+                    </p>
+                </div>
+
+                <!-- Pipeline Visualization -->
+                <div class="fx-pipeline" aria-label="Visual pipeline" data-fx-parallax="0.08">
+                    <div class="fx-node">Trigger</div><span class="fx-arrow">→</span>
+                    <div class="fx-node">Transform</div><span class="fx-arrow">→</span>
+                    <div class="fx-node">Validate</div><span class="fx-arrow">→</span>
+                    <div class="fx-node">Execute</div><span class="fx-arrow">→</span>
+                    <div class="fx-node">Output</div>
+                </div>
+
+                <div class="fx-grid">
+                    <article class="fx-card">
+                        <div class="fx-card-icon" aria-hidden="true">◇</div>
+                        <h3>Flow Engine</h3>
+                        <p>Visual workflow composition with a directed acyclic graph engine. Define dependencies,
+                            conditions, and parallel execution paths with surgical precision.</p>
+                    </article>
+                    <article class="fx-card">
+                        <div class="fx-card-icon" aria-hidden="true">⬡</div>
+                        <h3>Worker Queue</h3>
+                        <p>Distributed job execution across multiple workers. Built-in retry logic, dead-letter queues,
+                            and priority scheduling for mission-critical pipelines.</p>
+                    </article>
+                    <article class="fx-card">
+                        <div class="fx-card-icon" aria-hidden="true">◈</div>
+                        <h3>Node Marketplace</h3>
+                        <p>Share and discover reusable modules. Every node is versioned, documented, and tested.
+                            Compose community nodes with your own custom logic.</p>
+                    </article>
+                </div>
+
+                <div class="fx-stats">
+                    <div class="fx-stat">
+                        <span class="fx-stat-val" data-count="12" data-suffix="ms">0</span>
+                        <span class="fx-stat-lbl">Avg Latency</span>
+                    </div>
+                    <div class="fx-stat">
+                        <span class="fx-stat-val" data-count="10000" data-suffix="/s">0</span>
+                        <span class="fx-stat-lbl">Nodes / Second</span>
+                    </div>
+                    <div class="fx-stat">
+                        <span class="fx-stat-val" data-count="99.99" data-suffix="%">0</span>
+                        <span class="fx-stat-lbl">Uptime SLA</span>
+                    </div>
+                    <div class="fx-stat">
+                        <span class="fx-stat-val" data-count="250" data-suffix="+">0</span>
+                        <span class="fx-stat-lbl">Community Nodes</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── TECHNOLOGY ─── -->
+        <section id="fx-technology" class="fx-section" data-scene="technology">
+            <div class="fx-section-inner" data-fx-parallax="0.1">
+                <div class="fx-section-head">
+                    <span class="fx-section-label">02 — Technology</span>
+                    <h2 class="fx-section-title">Forged in Rust.<br>Refined for Developers.</h2>
+                    <p class="fx-section-desc">
+                        The core engine is written in Rust for maximum concurrency and memory safety.
+                        Python sandboxes provide flexible node execution. Together they form a system
+                        that is both brutally fast and elegantly safe.
+                    </p>
+                </div>
+
+                <div class="fx-grid">
+                    <article class="fx-card">
+                        <div class="fx-card-icon" aria-hidden="true">⚙</div>
+                        <h3>Rust Core</h3>
+                        <p>Zero-cost abstractions, fearless concurrency, guaranteed memory safety.
+                            Handles thousands of concurrent workflows without breaking stride.</p>
+                    </article>
+                    <article class="fx-card">
+                        <div class="fx-card-icon" aria-hidden="true">▣</div>
+                        <h3>Python Sandbox</h3>
+                        <p>Each node executes in an isolated environment with resource limits.
+                            Safe by default — no filesystem, no network, no side effects unless allowed.</p>
+                    </article>
+                    <article class="fx-card">
+                        <div class="fx-card-icon" aria-hidden="true">◫</div>
+                        <h3>gRPC Transport</h3>
+                        <p>All inter-service communication uses gRPC with Protocol Buffers.
+                            Strongly typed contracts, bidirectional streaming, sub-millisecond serialization.</p>
+                    </article>
+                    <article class="fx-card">
+                        <div class="fx-card-icon" aria-hidden="true">⎔</div>
+                        <h3>Observability</h3>
+                        <p>OpenTelemetry-native tracing, structured logging, Prometheus metrics.
+                            Every node execution is traceable, measurable, and debuggable.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── SHOWCASE ─── -->
+        <section id="fx-showcase" class="fx-section" data-scene="showcase">
+            <div class="fx-section-inner" data-fx-parallax="0.12">
+                <div class="fx-section-head">
+                    <span class="fx-section-label">03 — Showcase</span>
+                    <h2 class="fx-section-title">Built for Builders.</h2>
+                    <p class="fx-section-desc">
+                        From CI/CD orchestration to data pipeline automation, from API composition
+                        to event-driven workflows — FluxEngine adapts to your stack.
+                    </p>
+                </div>
+
+                <div class="fx-grid">
+                    <article class="fx-card">
+                        <div class="fx-card-icon" aria-hidden="true">⬢</div>
+                        <h3>CI/CD Orchestration</h3>
+                        <p>Replace brittle YAML pipelines with visual workflows. Conditional branching,
+                            parallel test execution, and automated rollbacks — all in one graph.</p>
+                    </article>
+                    <article class="fx-card">
+                        <div class="fx-card-icon" aria-hidden="true">◈</div>
+                        <h3>Data Pipelines</h3>
+                        <p>Extract, transform, and load data across systems. Built-in connectors for PostgreSQL,
+                            Kafka, S3, and more. Fault-tolerant with exactly-once semantics.</p>
+                    </article>
+                    <article class="fx-card">
+                        <div class="fx-card-icon" aria-hidden="true">◇</div>
+                        <h3>API Composition</h3>
+                        <p>Compose multiple APIs into a single workflow. Handle authentication, rate limiting,
+                            caching, and error recovery automatically at the platform level.</p>
+                    </article>
+                    <article class="fx-card">
+                        <div class="fx-card-icon" aria-hidden="true">⬡</div>
+                        <h3>Event-Driven Automation</h3>
+                        <p>Trigger workflows from webhooks, message queues, or cron expressions.
+                            React to events in real-time with sub-second cold starts.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── FOOTER ─── -->
+        <footer class="fx-footer" id="fx-footer" data-scene="footer">
+            <div class="fx-footer-grid">
+                <div>
+                    <div class="fx-footer-brand">FLUXENGINE</div>
+                    <p class="fx-footer-desc">
+                        A high-performance developer platform for building automation pipelines.
+                        Built with Rust. Powered by creativity.
+                    </p>
+                </div>
+                <div class="fx-footer-col">
+                    <h4>Product</h4>
+                    <a href="#fx-architecture">Architecture</a>
+                    <a href="#fx-technology">Technology</a>
+                    <a href="#fx-showcase">Showcase</a>
+                    <a href="#">Documentation</a>
+                </div>
+                <div class="fx-footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">GitHub</a>
+                    <a href="#">Node Marketplace</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Changelog</a>
+                </div>
+                <div class="fx-footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy</a>
+                </div>
+            </div>
+            <div class="fx-footer-bottom">
+                <span>© 2026 FluxEngine. All rights reserved.</span>
+                <span>Forged in Rust · Rendered in WebGL</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Three.js Import Map -->
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+    </script>
+
+    <!-- Main Application -->
+    <script type="module" src="./assets/js/flux-enhancements.js"></script>
+</body>
+
+</html>
