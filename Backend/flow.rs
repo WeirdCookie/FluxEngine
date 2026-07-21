@@ -6,7 +6,7 @@ pub struct Flow {
 
 impl Flow {
     pub fn run(&self) {
-        println!("Flow hat {} Node(s).", self.nodes.len());
+        println!("Flow has {} Node(s).", self.nodes.len());
         for node in &self.nodes {
             node.run();
         }
