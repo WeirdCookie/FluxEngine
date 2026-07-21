@@ -5,9 +5,9 @@ use crate::flow::Flow;
 use crate::node::Node;
 
 fn main() {
-    let n1 = Node { name: "Start".to_string() };
-    let n2 = Node { name: "Process".to_string() };
-    let n3 = Node { name: "End".to_string() };
+    let n1 = Node::EventNode;
+    let n2 = Node::FlowNode;
+    let n3 = Node::WorkerNode;
 
     let flow = Flow {
         nodes: vec![n1, n2, n3],
