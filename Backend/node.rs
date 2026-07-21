@@ -1,9 +1,18 @@
-pub struct Node {
-    pub name: String,
-}
 
 impl Node {
     pub fn run(&self) {
-        println!("Running node: {}", self.name);
+        match self {
+            Node::EventNode => println!("Running Event Node"),
+            Node::FlowNode => println!("Running Flow Node"),
+            Node::WorkerNode => println!("Running Worker Node"),
+            Node::IfElseNode => println!("Running If-Else Node"),
+        }
     }
+}
+
+pub enum Node {
+    EventNode,
+    FlowNode,
+    WorkerNode,
+    IfElseNode,
 }
